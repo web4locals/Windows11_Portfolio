@@ -9,3 +9,5 @@ Desktop style layout, Portfolio, Useful Links, Chat Box, Desktop Style Widgets (
 My fist step is to layout a background, navbar...26/05/22
 
 #Update I have completed Wallpaper, Taskbar Frame and Icon. (icon needs tlc)
+
+[Check out my progress so far!](https://github.com/web4locals/Windows11_Portfolio)
