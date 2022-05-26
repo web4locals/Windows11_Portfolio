@@ -1,0 +1,12 @@
+/* v0.1*/
+/*Messy start */
+
+* {
+    margin: 0;
+    padding: 0
+    box-sizing:border-box;
+}
+
+.body {
+background-color: black;
+}
