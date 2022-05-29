@@ -2,47 +2,320 @@
 /*Messy start */
 
 * {
-    margin: 0;
-    padding: 0
-    box-sizing border-box;
+  margin: 0;
+  padding: 0 box-sizing border-box;
 }
-
+/*Full screen background*/
 html {
-    min-height: 100%;
-    background-image: url(../img19.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  min-height: 100%;
+  background-image: url(../img19.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-min-height: auto;    
-}
+body {
+  min-height: auto;
+  
 
+}
+/*Desktop Items*/
 .folder img {
-    display:fixed;
-    padding:2%;
-    padding-bottom: 10px;
-    width:5%;
-    height:5%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 0px;
+  width: 5%;
+  height: 5%;
 }
-.folder a {
-    padding-left: 15px;
-    color: white;
-    font-size: small;
-    text-decoration: none;
-    margin: 0 20px 0 20px; 
-
+.folder figcaption a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding-left: 3%;
+  margin-top: -10px;
+  align-items: center;
+  font-size: 1vw;
 }
 
-.taskbar{
-  position:fixed;
+/*Taskbar */
+.taskbar {
+  position: fixed;
   bottom: 0;
   background-color: rgba(28, 33, 44, 0.685);
-  opacity:1.0;
-  backdrop-filter: blur(14px) ;
+  opacity: 1;
+  backdrop-filter: blur(14px);
   width: 100%;
   height: 3.5%;
   padding: 10px;
 }
+/*clock*/
+#time {
+  font-size: 1.5vh;
+  color: white;
+  margin-right: 10%;
+  float: right;
+}
+
+/*DESKTOP WIDGETS*/
+#clock {
+  background: rgba(255, 255, 255, 0.137);
+  border: 15px solid #222;
+  border-radius: 50%;
+  position: fixed;
+  width: 320px;
+  height: 320px;
+}
+
+.clockpos {
+  position: fixed;
+  margin-right: 10%;
+}
+
+.aclock ul {
+  list-style: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+}
+
+.aclock li {
+  position: absolute;
+  transform-origin: 50% 100%;
+  height: 160px;
+}
+
+.hours {
+  left: 120px;
+  font-size: 23.3333333333px;
+  letter-spacing: -1.6px;
+  line-height: 45px;
+}
+.hours li {
+  width: 80px;
+}
+.hours span {
+  display: block;
+}
+.hours li:nth-of-type(1) {
+  transform: rotate(30deg);
+}
+.hours li:nth-of-type(1) span {
+  transform: rotate(-30deg);
+}
+.hours li:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+.hours li:nth-of-type(2) span {
+  transform: rotate(-60deg);
+}
+.hours li:nth-of-type(3) {
+  transform: rotate(90deg);
+}
+.hours li:nth-of-type(3) span {
+  transform: rotate(-90deg);
+}
+.hours li:nth-of-type(4) {
+  transform: rotate(120deg);
+}
+.hours li:nth-of-type(4) span {
+  transform: rotate(-120deg);
+}
+.hours li:nth-of-type(5) {
+  transform: rotate(150deg);
+}
+.hours li:nth-of-type(5) span {
+  transform: rotate(-150deg);
+}
+.hours li:nth-of-type(6) {
+  transform: rotate(180deg);
+}
+.hours li:nth-of-type(6) span {
+  transform: rotate(-180deg);
+}
+.hours li:nth-of-type(7) {
+  transform: rotate(210deg);
+}
+.hours li:nth-of-type(7) span {
+  transform: rotate(-210deg);
+}
+.hours li:nth-of-type(8) {
+  transform: rotate(240deg);
+}
+.hours li:nth-of-type(8) span {
+  transform: rotate(-240deg);
+}
+.hours li:nth-of-type(9) {
+  transform: rotate(270deg);
+}
+.hours li:nth-of-type(9) span {
+  transform: rotate(-270deg);
+}
+.hours li:nth-of-type(10) {
+  transform: rotate(300deg);
+}
+.hours li:nth-of-type(10) span {
+  transform: rotate(-300deg);
+}
+.hours li:nth-of-type(11) {
+  transform: rotate(330deg);
+}
+.hours li:nth-of-type(11) span {
+  transform: rotate(-330deg);
+}
+.hours li:nth-of-type(12) {
+  transform: rotate(360deg);
+}
+.hours li:nth-of-type(12) span {
+  transform: rotate(-360deg);
+}
+ 
+
+
+
+/* JavaScript pre-rotates these wrappers instead of the hands when getting the time at load. If it pre-rotates the hands, then the hands will not perform 1 turn at their normal speeds. */
+.hr-wrapper, .min-wrapper, .sec-wrapper {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+}
+
+.hr {
+  background: #222;
+  left: 152px;
+  width: 13px;
+  height: 105px;
+  border-radius: 10px;
+  animation: rotateHand 43200s linear infinite;
+}
+.hr:after {
+  background: #222;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  width: 13px;
+  height: 16px;
+}
+
+.min {
+  background: #222;
+  left: 155px;
+  width: 9px;
+  height: 125px;
+  border-radius: 8px;
+  animation: rotateHand 3600s linear infinite;
+}
+.min:after {
+  background: #222;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  width: 9px;
+  height: 16px;
+}
+
+.sec {
+  background: #d00;
+  left: 156.5px;
+  width: 5px;
+  height: 132px;
+  border-radius: 8px;
+  animation: rotateHand 60s linear infinite;
+}
+.sec:after {
+  background: #d00;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3.5px;
+  width: 5px;
+  height: 7px;
+}
+
+@keyframes rotateHand {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/*TASKBAR ICONS*/
+
+
+.smenu {
+  display: block;
+  
+}
+
+.smenu ul{
+  list-style-type: none;
+  text-align: center;
+  
+}
+
+.smenu li {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2%;
+  
+}
+
+.smenu li img {
+  width: 1.9vw;
+  height: 3vh;
+  margin-top: 0.20vh;
+  margin-right: 1.5%;
+}
+/*Window*/
+#window1{
+  visibility:visible;
+}
+.popup {
+  
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  
+  
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  visibility: hidden/*Delete when working*/;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+

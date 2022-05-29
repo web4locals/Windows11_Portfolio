@@ -5,20 +5,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/assets/CSS/styles.css">
-    <title>Lets get this party started!</title>
+    
+    <title>Work in progress!</title>
 </head>
-<body>
-     
-    <header>
-
+<body onload="timer()">
+    <p id="tt"></p>
+  
+    <script src="./pages/assets/JS/scripts.js"></script>
+<header>
+            <!--FOLDER-->  
+    <section id="main-folder" class="folder">
+        <figure>
+            <a href="https://github.com/web4locals/Windows11_Portfolio"> <img src="./pages/assets/Folder.png"></a>
+        <figcaption><span><a href="https://github.com/web4locals/Windows11_Portfolio">Folder</a></span></figcaption>  
+    </figure>
+    </section>
+            <!--FOLDER END-->
 </header>
-    <main>
-        <div id="main-folder" class="folder">
-            <a href="https://github.com/web4locals/Windows11_Portfolio"><img src="./pages/assets/Folder.png" alt="Folder">Main Folder</a>
-        </div>
-    </main>
+    <main>    
+            <!--Desktop Widgets-->  
+        
+            <!--<section id='clock' class="aclock">
+                <section class="clockpos"><ul class='hours'>
+                  <li>
+                    <span>
+                      1
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      2
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      3
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      4
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      5
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      6
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      7
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      8
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      9
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      10
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      11
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      12
+                    </span>
+                  </li>
+                </ul>
+               
+                <div class='hr-wrapper'>
+                  <div class='hand hr'></div>
+                </div>
+                <div class='min-wrapper'>
+                  <div class='hand min'></div>
+                </div>
+                <div class='sec-wrapper'>
+                  <div class='hand sec'></div>
+                </div></section>
+            
+              </section>-->
+              
+        
+
+            <!--Desktop Widgets END-->
+                      <!--WINDOWS-->
+     
+     <section id="popup1" class="overlay">
+            <article id="window1" class="popup">
+                <h2>Welcome to my messy project!</h2><br>
+                <a class="close">&times;</a>
+                <script src="./pages/assets/JS/scripts.js"></script>
+                <aside class="content">
+                    <p>Nothing works yet... Except the Search icon, Folder, Chat-box (needs better layout) and Clock </p>
+                    <br>
+                    <p>Thanks for checking it out! <br>Leave a message in the chat so I know something works :P (I am still working on updates)</p>
+                
+            </aside>
+        </article>
+
+    </section>
+
+                <!--WINDOWS END-->
+
+
+
+
+<!--Footer-->
+</main>
     <footer id="navfoot" class="taskbar">
-       
+        
+        <section>
+            <p id="time"></p>
+        </section>
+           
+
+
+                        <!--TASKBAR ICONS-->
+<section class="smenu">
+    <ul id="task-icons" class="t-icons">
+        <li><a href="#popup1" style="visibility: visible;"> <img src="./pages/assets/start.png"alt="Start Menu"></a></li>
+        <li><a href="https://googlethatforyou.com/?q=search%20%22google.com%22"><img alt="Search" src="./pages/assets/Search Icon.png"></a></li>
+        <li><a href="#"><img src="./pages/assets/Library Music.png"></a></li>
+        <li><a href="#"><img src="./pages/assets/180.ico"></a></li>
+        <li><a href="#"><img src="./pages/assets/Icon BG.png"></a></li>
+        <li><a href="#"><img src="./pages/assets/Icon BG.png"></a></li>
+    </ul>
+</section>
+                <!--TASKBAR ICONS END-->
+
+                        <!--CHATBOX-->
+                        <section class="chatbox">
+                            <script src="https://cdn.deadsimplechat.com/production/2.15.6/public/js/embed.js" type="text/javascript"></script>
+                            <script>
+                        window.DeadSimpleChat.initBubble({
+                            location: "https://deadsimplechat.com",
+                        size: "large",
+                            roomId: "XUgThLSxW",
+                            open: "true"
+                        })
+                    </script>
+                        </section>
+                        <!--CHATBOX END-->
     </footer>
 </div>
 </body>
